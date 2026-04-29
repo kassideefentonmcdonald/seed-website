@@ -98,9 +98,7 @@
   .donate-impact-list li::before { content: '→'; color: #CC1F2A; flex-shrink: 0; }
 
   .donate-box { background: #141414; border: 1px solid var(--border); padding: 2.5rem; }
-  .donate-toggle { display: flex; gap: 1px; background: var(--border); margin-bottom: 2rem; }
-  .donate-toggle button { flex: 1; padding: 0.75rem; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; border: none; background: #1e1e1e; color: rgba(245,245,240,0.45); cursor: pointer; transition: background 0.2s, color 0.2s; }
-  .donate-toggle button.active { background: #CC1F2A; color: #f5f5f0; }
+
 
   /* Amount grid — equal height rows, aligned */
   .amount-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); margin-bottom: 1.5rem; }
@@ -318,7 +316,7 @@
   <p class="hero-sub">Fresno's next generation of athletes has the talent. Your investment gives them the access, structure, and support to make it.</p>
   <div class="hero-actions">
     <a href="#sponsor" class="btn-primary">Become a Partner</a>
-    <a href="#donate" class="btn-ghost">Make a Donation</a>
+    <a href="https://www.zeffy.com/en-US/donation-form/fund-a-future-give-central-valley-athletes-a-real-opportunity" target="_blank" class="btn-ghost">Make a Donation</a>
   </div>
   <div class="hero-stat-bar">
     <div class="hero-stat"><strong>100%</strong><span>Back to the Kids</span></div>
@@ -384,7 +382,7 @@
     <div class="donate-left">
       <p class="section-label">Give Now</p>
       <h2 class="section-title">Every Dollar<br>Creates Access.</h2>
-      <p>You don't have to be a corporate sponsor to change a kid's trajectory. A one-time or monthly gift goes directly to the athletes and families who need it most.</p>
+      <p>You don't have to be a corporate sponsor to change a kid's trajectory. Every dollar goes directly to the athletes and families who need it most.</p>
       <ul class="donate-impact-list">
         <li>Cover registration, training, and camp fees that block opportunity</li>
         <li>Fund equipment and gear so every athlete shows up ready</li>
@@ -393,30 +391,27 @@
       </ul>
     </div>
     <div class="donate-box">
-      <div class="donate-toggle">
-        <button class="active" onclick="setFreq('one-time', this)">One-Time</button>
-        <button onclick="setFreq('monthly', this)">Monthly</button>
-      </div>
+
       <div class="amount-grid">
-        <button class="amount-btn" onclick="selectAmount(this, 50)">
-          <span class="amount-btn-price">$50</span>
-          <span class="amount-label">Gear help</span>
-        </button>
-        <button class="amount-btn selected" onclick="selectAmount(this, 150)">
-          <span class="amount-btn-price">$150</span>
-          <span class="amount-label">Training access</span>
-        </button>
-        <button class="amount-btn" onclick="selectAmount(this, 500)">
-          <span class="amount-btn-price">$500</span>
-          <span class="amount-label">Scholarship</span>
-        </button>
         <button class="amount-btn" onclick="selectAmount(this, 1000)">
           <span class="amount-btn-price">$1,000</span>
-          <span class="amount-label">Full support</span>
+          <span class="amount-label">Athlete Sponsor</span>
+        </button>
+        <button class="amount-btn selected" onclick="selectAmount(this, 1500)">
+          <span class="amount-btn-price">$1,500</span>
+          <span class="amount-label">Community Support</span>
+        </button>
+        <button class="amount-btn" onclick="selectAmount(this, 5000)">
+          <span class="amount-btn-price">$5,000</span>
+          <span class="amount-label">Major Impact</span>
+        </button>
+        <button class="amount-btn" onclick="selectCustom(this)">
+          <span class="amount-btn-price">Your Call</span>
+          <span class="amount-label">Name your amount</span>
         </button>
       </div>
-      <button class="donate-cta" id="donate-cta-btn" onclick="handleDonate()">Donate $150 — One-Time</button>
-      <p class="donate-note">Secure payment · 100% goes to S.E.E.D. programs · Tax-deductible</p>
+      <button class="donate-cta" id="donate-cta-btn" onclick="handleDonate()">Donate $1,500 — Give Now</button>
+      <p class="donate-note">You'll be taken to our secure Zeffy donation page · 100% goes to S.E.E.D. programs · Tax-deductible · 501(c)(3)</p>
     </div>
   </div>
 </section>
@@ -579,7 +574,7 @@
     <div class="scholarship-form">
       <h3>Submit Scholarship Interest</h3>
       <p class="form-sub">This form is for families seeking support. We review all submissions and reach out directly. No commitment required to express interest.</p>
-      <form action="https://formspree.io/f/meevlgnl" method="POST">
+      <form action="https://formspree.io/f/mzdynjqw" method="POST">
       <div class="form-row">
         <div class="form-field">
           <label>Parent / Guardian Name</label>
@@ -644,7 +639,7 @@
   <p class="cta-body">Whether you're a local business, regional company, or individual investor in the next generation — there's a place for you in the S.E.E.D. family.</p>
   <div class="cta-actions">
     <a href="/cdn-cgi/l/email-protection#bad3d4dcd5faccdbd6d6dfc3c9dfdfde94d5c8dd" class="btn-primary">Become a Sponsor</a>
-    <a href="#donate" class="btn-ghost">Make a Donation</a>
+    <a href="https://www.zeffy.com/en-US/donation-form/fund-a-future-give-central-valley-athletes-a-real-opportunity" target="_blank" class="btn-ghost">Make a Donation</a>
   </div>
   <p class="cta-email">Questions? <a href="/cdn-cgi/l/email-protection#f1989f979eb187909d9d948882949495df9e8396"><span class="__cf_email__" data-cfemail="e38a8d858ca395828f8f869a90868687cd8c9184">[email&#160;protected]</span></a></p>
 </section>
@@ -677,15 +672,7 @@
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  let currentFreq = 'one-time';
-  let currentAmount = 150;
-
-  function setFreq(freq, btn) {
-    currentFreq = freq;
-    document.querySelectorAll('.donate-toggle button').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    updateDonateBtn();
-  }
+  let currentAmount = 1500;
 
   function selectAmount(btn, amount) {
     currentAmount = amount;
@@ -694,10 +681,16 @@
     updateDonateBtn();
   }
 
+  function selectCustom(btn) {
+    document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    document.getElementById('donate-cta-btn').textContent = 'Give Now — Choose Your Amount';
+    currentAmount = null;
+  }
+
   function updateDonateBtn() {
-    const label = currentFreq === 'monthly' ? 'Monthly' : 'One-Time';
     const formatted = '$' + currentAmount.toLocaleString();
-    document.getElementById('donate-cta-btn').textContent = 'Donate ' + formatted + ' — ' + label;
+    document.getElementById('donate-cta-btn').textContent = 'Donate ' + formatted + ' — Give Now';
   }
 
   function handleDonate() {
